@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Your Bootstrap Page</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mt-5">All Employee Details</h1>
+ 
+    <table class="table table-bordered border-primary">
+        <thead class = "table-light">
+            <tr>
+                <th scope = "row">id</th>
+                <th scope="col">first_name</th>
+                <th scope="col">last_name</th>
+                <th scope="col">salary</th>
+                <th scope="col">bonus</th>
+                <th scope="col">phone</th>
+                <th scope="col">hire_date</th>
+                <th scope="col">dept_name</th>
+                <th scope="col">role_name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in emps %}
+            <tr>
+                <th> {{emp.id}}</td>
+                <td>{{ emp.first_name }}</td>
+                <td>{{ emp.last_name }}</td>
+                <td>{{ emp.salary }}</td>
+                <td>{{ emp.bonus }}</td>
+                <td>{{ emp.phone }}</td>
+                <td>{{ emp.hire_date }}</td>
+                <td>{{ emp.dept.name }}</td>
+                <td>{{ emp.role.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+   
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
